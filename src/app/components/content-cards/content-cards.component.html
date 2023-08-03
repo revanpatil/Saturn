@@ -1,0 +1,46 @@
+<div class="content-card">
+  <div class="content-details">
+    <div>
+      <ng-content select="[title]"></ng-content>
+    </div>
+    <!-- title -->
+    <div class="scores">
+      <div *ngIf="hasScoreContent">
+        <div class="score-details" #hasScore>
+          <!-- score -->
+          <ng-content select="[score]"></ng-content>
+          <ng-content select="[score-badge]"></ng-content>
+        </div>
+      </div>
+      <div class="time-details">
+        <div>
+          <!-- score -->
+          <ng-content select="[fire]"></ng-content>
+        </div>
+        <div>
+          <!-- score -->
+          <ng-content select="[upload]"></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="score-footer">
+      <!-- score-footer -->
+      <ng-content select="[score-footer]"></ng-content>
+    </div>
+    <div class="progress-bar">
+      <!-- progress-bar -->
+      <ng-content select="[progress-bar]"></ng-content>
+    </div>
+    <div class="progress-time">
+      <!-- progress-time -->
+      <ng-content select="[progress-time]"></ng-content>
+    </div>
+
+    <div id="bmi-text">Your current BMI</div>
+
+  </div>
+  <div *ngIf="viewMode == 'extended'" class="detailed-buttons">
+    <!-- detailed buttons -->
+    <ng-content select="[details-buttons]"></ng-content>
+  </div>
+</div>

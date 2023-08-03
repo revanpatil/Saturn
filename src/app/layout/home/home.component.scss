@@ -1,0 +1,396 @@
+@import "../../../assets/variables";
+
+.home-wrapper {
+  width: 100%;
+  margin-top: 0;
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    font-weight: 500;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+  }
+
+  .compact-cards {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    .title {
+      margin-top: 10px;
+      margin-left: 17px;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 24px; /* 200% */
+    }
+
+    #container-2 {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.2) 100%
+        ),
+        #ffecf3;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .content-card-container-1,
+    .content-card-container-2 {
+      width: 100%;
+      height: 126px;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.2) 100%
+        ),
+        #fff3eb;
+      border: none;
+      border-radius: 10px;
+
+      #only-badges {
+        margin-left: 2px;
+        margin-bottom: 12.5px;
+        margin-top: 8px;
+      }
+
+      .progress-wrapper {
+        margin-left: 13px;
+        color: #777;
+        font-size: 10px;
+        line-height: 14px; /* 140% */
+
+        .progress-time-week {
+          font-weight: 400;
+        }
+
+        .progress-time {
+          margin: 0 0 0 3px;
+          font-weight: 700;
+        }
+      }
+      .progress-bar {
+        margin: -2px 0 0 13px;
+        padding: 0;
+      }
+      .score-with-badges {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+        margin-left: 17px;
+        .score {
+          padding: 0;
+          margin-right: 0;
+        }
+        .badges {
+          margin-left: 14px;
+          color: #777;
+          font-size: 10px;
+          font-weight: 400;
+          margin-top: auto;
+          margin-bottom: auto;
+          .time {
+            margin: 0;
+
+            img {
+              margin-right: 8px;
+            }
+          }
+
+          .up {
+            margin: 0;
+
+            img {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .extended-cards {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    // height: 114px;
+  }
+
+  .content-card-container {
+    width: 100%;
+  }
+
+  .classic-card-container {
+    display: flex;
+    flex: wrap;
+    overflow-x: scroll;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    // margin-left: 16px;
+    gap: 19px;
+    width: 100%;
+  }
+
+  .product-card-container {
+    // margin-left: 12px;
+    display: flex;
+    flex: wrap;
+    overflow-x: scroll;
+    gap: 19px;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 37px;
+  }
+
+  .action-textbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 14px;
+    color: #333;
+    height: 23px !important;
+    .action-cta {
+      background-color: #fff;
+      margin-left: auto;
+      margin-right: 23px;
+
+      font-family: Inter;
+      color: #333;
+
+      display: flex;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 14px; /* 70% */
+      letter-spacing: 0.18px;
+    }
+
+    button {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 4px 20px 5px 19px;
+      border-radius: 20px;
+      border: 1px solid #333;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .features-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    justify-content: space-between;
+    overflow-y: scroll;
+    /* Enable smooth scrolling on iOS devices */
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    margin-left: 12px;
+    margin-right: 8px;
+    margin-bottom: 23px;
+  }
+
+  .overview-title {
+    font-variant-numeric: lining-nums proportional-nums;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px; /* 200% */
+  }
+
+  .score-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .score {
+    color: #333; /* Text color: #333 */
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px; /* 110% */
+    padding-left: 53px;
+    padding-right: 0;
+    margin-right: 3.33px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .score-badge {
+    color: #fa725f; /* Text color: #FA725F */
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 150%; /* 12px */
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 2px 7px 3px 7px;
+  }
+
+  .cta-button {
+    display: flex;
+    white-space: nowrap;
+    font-size: 10px;
+    width: 100px;
+    height: 26px;
+    padding: 4px 26px 4px 11px;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    flex-shrink: 0;
+    background: #fff;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.07);
+    color: #333;
+    font-size: 10px;
+    font-weight: 700;
+
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .weight-logo {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-right: 8px; /* Add space between the logo and text */
+  }
+
+  .progress-time {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .upload {
+    display: flex;
+    font-size: 5px;
+  }
+
+  .btn-all-trackers {
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #333;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+
+    color: #fff;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  #btn-all-trackers {
+    margin: 19px 12px 21px 13px;
+  }
+
+  .custom-button {
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .custom-button::after {
+    content: ">"; /* Adding the arrow (>) using the pseudo-element ::after */
+    margin-left: 8px;
+  }
+
+  .custom-button {
+    width: 335px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .custom-button .instagram-logo {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .custom-button::after {
+    content: ">"; /* Adding the arrow (>) using the pseudo-element ::after */
+    margin-left: 8px;
+  }
+
+  #header-textbox {
+    margin-top: 7px;
+    margin-bottom: 1px;
+  }
+
+  #welcome {
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  #client-name {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .social-wall {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 100px;
+
+    button {
+      height: 55px;
+    }
+  }
+
+  #card-container-bottom {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,220 @@
+<div class="home-wrapper">
+  <div class="action-textbox">
+    <div id="header-textbox">
+      <span id="welcome">Welcome</span><span id="client-name">, June</span>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <app-action-cards
+      *ngFor="let card of actionCardsData"
+      [img]="card.imgUrl"
+      [title]="card.title"
+      [bgColor]="card.bgColor"
+    >
+    </app-action-cards>
+  </div>
+  <div class="extended-cards">
+    <div class="content-card-container">
+      <app-content-cards [viewMode]="'extended'">
+        <span title class="overview-title">Wellness Overview:</span>
+        <span score class="score">40</span>
+
+        <button score-badge class="score-badge">Overweight</button>
+        <div details-buttons class="cta-container">
+          <button class="cta-button">
+            <img
+              src="assets/weight-icon.png"
+              alt="Weight Logo"
+              class="weight-logo"
+            />80.5 kg
+          </button>
+        </div>
+
+        <div details-buttons class="cta-container">
+          <button class="cta-button">
+            <img
+              src="assets/sleep-icon.png"
+              alt="Bed Logo"
+              class="weight-logo"
+            />7/8 Hours
+          </button>
+        </div>
+        <div details-buttons class="cta-container">
+          <button class="cta-button">
+            <img
+              src="assets/water-drop-icon.png"
+              alt="Water Drop"
+              class="weight-logo"
+            />4/8 Glasses
+          </button>
+        </div>
+      </app-content-cards>
+    </div>
+  </div>
+
+  <div class="compact-cards">
+    <div class="content-card-container-1">
+      <div class="title">Overall skin score:</div>
+      <div class="score-with-badges">
+        <div class="score">45</div>
+        <div class="badges">
+          <div fire class="time">
+            <img src="assets/fire-icon.png" alt="Fire Logo" />
+            <span>5 weeks</span>
+          </div>
+          <div upload class="up">
+            <img src="assets/image-icon.png" alt="Photo Logo" />
+            <span>upload</span>
+          </div>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <img src="/assets/progress.png" />
+      </div>
+      <div class="progress-wrapper">
+        <span class="progress-time-week">Week:</span>
+        <span class="progress-time">40/54</span>
+      </div>
+    </div>
+
+    <div class="content-card-container-2" id="container-2">
+      <div class="title">Hair Tracker:</div>
+
+      <div class="score-with-badges" id="only-badges">
+        <div class="badges">
+          <div fire class="time">
+            <img src="assets/fire-icon.png" alt="Fire Logo" />
+            <span>5 weeks</span>
+          </div>
+          <div upload class="up">
+            <img src="assets/image-icon.png" alt="Photo Logo" />
+            <span>upload</span>
+          </div>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <img src="/assets/progress.png" />
+      </div>
+      <div class="progress-wrapper">
+        <span class="progress-time-week">Week:</span>
+        <span class="progress-time">40/54</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="btn-all-trackers">
+    <button class="btn-all-trackers">
+      View all trackers<img src="/assets/vector1.svg" />
+    </button>
+  </div>
+
+  <div class="features-container">
+    <div *ngFor="let card of features">
+      <app-features [img]="card.imgUrl"> </app-features>
+    </div>
+  </div>
+
+  <div class="action-textbox">
+    <h2>Best Sellers</h2>
+    <div class="action-cta">
+      <button>View all</button>
+    </div>
+  </div>
+
+  <div class="classic-card-container">
+    <div *ngFor="let card of classicCardsData">
+      <app-classic-cards
+        [img]="card.imgUrl"
+        [desc]="card.desc"
+        [title]="card.title"
+        [oldprice]="card.oldprice"
+      >
+      </app-classic-cards>
+    </div>
+  </div>
+
+  <div class="action-textbox">
+    <h2>Hair Care</h2>
+    <div class="action-cta">
+      <button>View all</button>
+    </div>
+  </div>
+
+  <div class="classic-card-container">
+    <div *ngFor="let card of classicCardsData">
+      <app-classic-cards
+        [img]="card.imgUrl"
+        [desc]="card.desc"
+        [title]="card.title"
+        [oldprice]="card.oldprice"
+      >
+      </app-classic-cards>
+    </div>
+  </div>
+
+  <div class="action-textbox">
+    <h2>Understanding Hair</h2>
+    <div class="action-cta">
+      <button>View all</button>
+    </div>
+  </div>
+
+  <div class="product-card-container">
+    <div *ngFor="let card of productCardsData">
+      <app-product-card
+        [img]="card.imgUrl"
+        [desc]="card.desc"
+        [title]="card.title"
+      >
+      </app-product-card>
+    </div>
+  </div>
+
+  <div class="action-textbox">
+    <h2>Skin Care</h2>
+    <div class="action-cta">
+      <button>View all</button>
+    </div>
+  </div>
+
+  <div class="classic-card-container">
+    <div *ngFor="let card of classicCardsData">
+      <app-classic-cards
+        [img]="card.imgUrl"
+        [desc]="card.desc"
+        [title]="card.title"
+        [oldprice]="card.oldprice"
+      >
+      </app-classic-cards>
+    </div>
+  </div>
+
+  <div class="action-textbox">
+    <h2>Skin Talk</h2>
+    <div class="action-cta">
+      <button>View all</button>
+    </div>
+  </div>
+
+  <div id="card-container-bottom" class="product-card-container">
+    <div *ngFor="let card of productsCardDataNew">
+      <app-product-card
+        [img]="card.imgUrl"
+        [desc]="card.desc"
+        [title]="card.title"
+      >
+      </app-product-card>
+    </div>
+  </div>
+
+  <div class="social-wall">
+    <button class="btn-all-trackers">
+      <img src="/assets/instagram.svg" />Join our 10K family on Instagram<img
+        src="/assets/vector1.svg"
+      />
+    </button>
+  </div>
+
+
+</div>
